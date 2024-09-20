@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    input{
+      width: 100%;
+      padding: 2px;
+    }
+    input:hover{
+      background-color: beige;
+      border: 2px solid lightblue;
+      padding: 2px;
+    }
+    .btn:hover{
+      background-color: darkred;
+      /* width: 200px; */
+      transition: 1s all ease-in-out;
+    }
+    .btn{
+      border-radius: 5px;
+      min-width: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      padding: 2px;
+      margin: 5px;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+
+    }
+    .btn.btn-primary{
+      background-color: green;
+    }
+    .btn.btn-primary:hover{
+      background-color: darkgreen;
+    }
+
+    .card{
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 5px\zz;
+    }
+    .card > div:nth-child(1){
+      background-color: lightgray;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px;
+    }
+    .card > div:nth-child(2){
+      min-height: 100px;
+    }
+    .card > div:nth-child(3){
+      background-color: lightgray;
+      font-size: x-small;
+      text-align: right;
+    }
+    
+  </style>
+  <script>
+    function invioForm(e){
+      // var frm = document.getElementById("frm");
+      // console.log(frm);
+      // debugger;
+      // console.log(frm.elements.username.value);
+      var txtUsername = document.getElementById("txtUsername");
+      console.log(txtUsername.value);
+      // debugger;
+    }
+  </script>
+</head>
+<body>
+  <h1>Card</h1>
+  <div class="card">
+    <div>Header
+      
+    </div>
+    <div>Body</div>
+    <div>Footer</div>
+  </div>
+  <h1>Forms</h1>
+  <form id="frm" onsubmit="invioForm();" style="width: 100%;">
+    <fieldset>
+      <legend>Inserire dati</legend>
+    <label for="txtUsername"">Inserire username</label>
+    <input type="text" id="txtUsername" name="username"
+            placeholder="Inserire username"">
+          </fieldset>
+
+    <table style="width: 50%;">
+      <tr>
+        <td>
+          <label for="js">Javascript</label>
+        </td>
+        <td>
+          <input id="js" type="radio" name="linguaggio" value="javascript"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="css">Css</label>
+        </td>
+        <td>
+          <input id="css" type="radio" name="linguaggio" value="css">
+      </td>
+    </tr>
+    <tr>
+    <td> <label for="html">Html</label></td>
+    <td><input id="html"" type="radio" name="linguaggio" value="html">
+    </td></tr>
+    </table>
+            <br>
+     
+    <div style="border: solid 1px black; width: 100%; display: flex;flex-direction: column; align-items: start;">
+
+      <div>
+        <label for="chkCondizioni">Accetta le condizioni di utilizzo</label>
+        <input type="checkbox" id="chkCondizioni" name="chkCondizioni">
+      </div>
+      <div style="display: grid; grid-template-columns: 100px auto; background-color: antiquewhite;
+      justify-content: space-between;   width: 100%;align-items: center; padding: 10px;">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <p>MInimo 5 caratteri</p>
+      </div>
+      <label for="birthday">Data di nascita</label>
+      <input type="date" id="birthday" name="birthday">
+      <label for="dataprenotazione">Data di prenotazione</label>
+      <input type="datetime-local" id="dataprenotazione" name="dataprenotazione">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+          
+      <select name="modello" id="">
+        <option value="">Seleziona un valore</option>
+        <option value="bmw">Bmw</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        <option value="volvo">Volvo</option>
+        <option value="fiat" >Fiat</option>
+      </select>
+      <label for="commento">Commento</label>
+      <textarea name="commento" id="commento" cols="30" rows="8"></textarea>
+    
+      <label for="telefono">Telefono</label>
+      <input type="tel" id="telefono" name="telefono" 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"]">
+      <label for="qta">Quantit&aacute;</label>
+      <input style="width: 50%;" type="number" id="qta" name="qta" 
+      min="0" max="10"
+      placeholder="Inserire la quantità" step="2">
+      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <button type="reset" class="btn">RIpristina</button> 
+        <button class="btn btn-primary" type="submit">Invia</button>
+      </div>
+    </div>
+    
+   
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </form>
+  
+</body>
+</html>
